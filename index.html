@@ -6,10 +6,11 @@
 
 	<a-scene embedded arjs='sourceType: webcam;'>
 		<a-assets>
- 			<a-asset-item id="tree" src="mhttps://cdn.rawgit.com/MorganPeju/ARad/master/model.gltf"></a-asset-item>
+ 			<a-asset-item id="tree" src="https://cdn.rawgit.com/MorganPeju/ARad/master/model.gltf"></a-asset-item>
 		</a-assets>
 		<a-gltf-model src="##tree"></a-gltf-model>
 		
+	<a-entity scale="20 20 20"  gltf-model="#makery"></a-entity>
 		<a-marker-camera preset='hiro'></a-marker-camera>
 	</a-scene>
 </body>
