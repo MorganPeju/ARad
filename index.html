@@ -1,21 +1,18 @@
 <html>
-<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
-<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
+<!-- <a-asset-item id="tree" src="https://cdn.rawgit.com/MorganPeju/ARad/master/model.gltf"></a-asset-item>
+</a-assets>
+<a-gltf-model src="##tree"></a-gltf-model> -->
+<script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+<!-- include ar.js for A-Frame -->
+<script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
 <body style='margin : 0px; overflow: hidden;'>
-<!-- use your gltf model -->
+  <a-scene embedded arjs>
+    <!-- create your content here. just a box for now -->
+    <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>
+    <!-- define a camera which will move according to the marker position -->
+    <a-marker-camera preset='hiro'></a-marker-camera>
+  </a-scene>
+</body>	
 
-	<a-scene embedded arjs='sourceType: webcam;'>
-		<a-marker preset='hiro'>
-		<a-assets>
- 			<a-asset-item id="tree" src="https://cdn.rawgit.com/MorganPeju/ARad/master/model.gltf"></a-asset-item>
-		</a-assets>
-		<a-gltf-model src="##tree"></a-gltf-model>
-		
-	<a-entity scale="20 20 20"  gltf-model="#makery"></a-entity>
-		</a-marker>
-<!-- define a simple camera -->
-<a-entity camera></a-entity>
-	</a-scene>
-</body>
 
 </html>
